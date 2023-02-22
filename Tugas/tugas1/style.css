@@ -1,0 +1,52 @@
+.suga1-1 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga1-2 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga2-2 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga1-3 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga2-3 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga3-3 {
+    width: 100px;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.suga-1 {
+    text-align: center;
+    line-height: 100px;
+}
+
+.suga-2 {
+    text-align: center;
+    line-height: 100px;
+    display: flex;
+}
+
+.suga-3 {
+    text-align: center;
+    line-height: 100px;
+    display: flex;
+}
