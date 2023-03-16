@@ -14,7 +14,7 @@
         //dikali 5 
          echo "jika aku dikali 5,maka aku sekarang menjadi"." ". $x *5 . "</br>";
         //dibagi 2
-        echo "jika aku dibagi 2,maka aku sekarang". " " .$x*5/2 ."</br>";
+        echo "jika aku dibagi 2,maka aku sekarang". " " .($x/=2) ."</br>";
         //ditambah 7
         echo "jika aku ditambah 75,maka aku sekarang menjadi"." ".$x*5/2+75 ."</br>";
         //dikurang 20
