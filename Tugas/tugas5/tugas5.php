@@ -7,9 +7,9 @@ $mahasiswa = [
  "jurusan" => "Teknik Informatika"
  ],
    [
- "nama" => "Anissa nursafitri",
- "nrp" => "223040163",
- "email" => "anissa163@gmail.com",
+ "nama" => "Dicky dwi dermawan",
+ "nrp" => "223040150",
+ "email" => "dicky150@gmail.com",
  "jurusan" => "Teknik informatika"
  
    ],
