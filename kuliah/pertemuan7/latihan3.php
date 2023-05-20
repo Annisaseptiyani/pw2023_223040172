@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topi saya bundar</title>
+    <title>post</title>
 </head>
 <body>
-    <h2><i><?php
-        
-            $topi = '"Topi saya Bundar, ';
-            $bundar = ' Bundar Topi saya."';
-
-            echo $topi . $bundar;
-        
-        ?>
-
-    </h2>  
+    <form action="latihan4.php" method="post">
+        Masukan nama:
+        <input type="text" name="nama">
+        <br>
+        <button type="submit" name="submit">kirim!</button>
+</from>
 </body>
 </html>

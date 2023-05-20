@@ -1,5 +1,5 @@
 <?php
-    $mahasiswa= ['Nama'=>'Annisa','binatang'=>'🐨','makanan'=>'🍕'],
+    $mahasiswa= [['Nama'=>'Annisa','binatang'=>'🐨','makanan'=>'🍕'],
 ['Nama'=>'yesi','binatang'=>'🐱','makanan'=>'🍔'],
 ['Nama'=>'ika','binatang'=>'🐯','makanan'=>'🌭'],
 ['Nama'=>'nisa','binatang'=>'🦝','makanan'=>'🥗'],

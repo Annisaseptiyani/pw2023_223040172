@@ -4,18 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topi saya bundar</title>
+    <title>latihan4</title>
 </head>
 <body>
-    <h2><i><?php
-        
-            $topi = '"Topi saya Bundar, ';
-            $bundar = ' Bundar Topi saya."';
-
-            echo $topi . $bundar;
-        
-        ?>
-
-    </h2>  
+    <h2>Selamat Datang,<?= $_POST["nama"]?>!</h2>
 </body>
 </html>
