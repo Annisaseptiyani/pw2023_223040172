@@ -9,7 +9,6 @@
     $rows = [];
     while ($row = mysqli_fetch_assoc($result)){
     $rows[] = $row;
-
  }
  return $rows;
 
@@ -128,11 +127,10 @@ return mysqli_affected_rows($conn);
 
 //funcution cari
 function cari($keyword) {
-   $query = "SELECT * FROM tb_product 
-   WHERE
-    judul_buku like '%$keyword%' OR
-    penulis like '%$keyword' OR
-    penerbit like '%$keyword' OR";
+   $query = "SELECT * FROM tb_product WHERE
+   judul_buku like '%$keyword%' OR
+   penulis like '%$keyword' OR
+   penerbit like '%$keyword'";
    return query($query);
 }
 
