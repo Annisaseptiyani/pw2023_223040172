@@ -1,31 +1,32 @@
 <?php
 require 'function.php';
+// ambil data di URL
+$id = $_GET ["id"];
+//query data mahasiswa berdsarkan
+$pro = query("SELECT * FROM tb_product WHERE id = $id")[0];
+
 //cek apakah tombol submit sudah ditekan atau belum
 if (isset($_POST["submit"])) {
 
-
-
-
-
-// cek apakah data berhasil ditambahkan atau tidak
-if(tambah($_POST) >0 ){
+// cek apakah data berhasil diubah atau tidak
+if(ubah($_POST) > 0 ){
     echo "
-<script>
-alert('data berhasil ditambahkan!');
-document.location.href = 'index1.php';
-</script>
+  <script>
+        alert('data berhasil diubah!');
+        document.location.href = 'index1.php';
+  </script>
     ";
-}else{
+} else {
     echo "
     <script>
-alert('data gagal ditambahkan!');
+alert('data gagal diubah!');
 document.location.href = 'index1.php';
-</script>
+  </script>
     ";
-}
+  }
 
-}
-?>
+  }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,36 +36,39 @@ document.location.href = 'index1.php';
     <title>Tambah data produk</title>
 </head>
 <body>
-    <h1>Tambah data produk</h1>
+    <h1>ubah data produk</h1>
     <form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?= $pro["id"]; ?>">
+        <input type="hidden" name="gambarlama" value="<?= $pro["gambar"]; ?>">
         <ul>
             <li>
                 <label for="judul_buku"> judul buku : </label>
-               <input type="text" name="judul_buku" id="judul buku"
-               required>
+               <input type="text" name="judul_buku" id="judul_buku" 
+                value="<?= $pro["judul_buku"];?>">
            </li>
            <li>
                 <label for="penulis"> Penulis buku : </label>
                <input type="text" name="penulis" id="penulis"
-               required>
+               value="<?= $pro["penulis"];?>">
            </li>
            <li>
                 <label for="penerbit"> Tanggal terbit: </label>
                <input type="date" name="penerbit" id="penerbit"
-               required>
+                value="<?= $pro["penerbit"];?>">
            </li>
            <li>
                 <label for="harga"> Harga buku: </label>
                <input type="text" name="harga" id="harga"
-               required>
+             value="<?= $pro["judul_buku"];?>">
            </li>
            <li>
                 <label for="gambar"> Gambar : </label>
-               <input type="file" name="gambar" id="gambar"
-               required>
+                <img src="img/<?= $pro['gambar']; ?>" width="40"> <br>
+               <input type="file" name="gambar" id="gambar">
+            
            </li>
            <li>
-        <button type="submit" name="submit">Tambah Data</button>
+        <button type="submit" name="submit">Ubah</button>
 </li>
          </ul>
        <form>
