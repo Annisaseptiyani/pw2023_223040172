@@ -59,7 +59,7 @@
           <h1 class="heading">make your shopping more enjoyable here</h1>
           <p class="subheading">make books a better place for you</p>
           <div class="btn-home mt-5">
-            <a href="#" class="btn btn-buy py-2 px-3 px-lg-4 py-lg-3">Buy now</a>
+            <a href="register.php" class="btn btn-buy py-2 px-3 px-lg-4 py-lg-3">REGISTER</a>
           </div>
         </div>
         <div class="col-lg-6 position-relative d-none d-lg-block">
@@ -151,7 +151,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
+                <img src="img\The Frog Prince-300x450.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
@@ -166,7 +166,7 @@
               </div>
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
+                  <img src="img\Puzzle Sliders Jungle Animals-300x450.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
@@ -181,7 +181,7 @@
               </div>
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
+                  <img src="img\Disney Princess Ariel-300x450.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
@@ -196,7 +196,7 @@
               </div>
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
+                  <img src="img\Busy Recycle-300x450.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
@@ -211,7 +211,7 @@
               </div>
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
+                  <img src="img\The Elves and the Shoemaker-300x450.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
@@ -222,20 +222,7 @@
                     <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
                   </div>
 
-                </div>
-              </div>
-              <div class="swiper-slide card-product">
-                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img/CSMV5bgsR_Rekomendasi_Buku_Self_Improvement_(2) (1).jpg" class="img-fluid" alt="">
-                </div>
-                <div class="detail-product mt-3 d-flex justify-content-between">
-                  <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
-                  </div>
-                  <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
-                  </div>
+                
 
                 </div>
               </div>
