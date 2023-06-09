@@ -44,8 +44,6 @@
         
           </div>
           <div class="icons-home mt-3 mt-lg-0">
-            <a href="#"><i class='bx bx-user'></i></a>
-            <a href="#"><i class='bx bxs-shopping-bags ms-3'></i></a>
           </div>
         </div>
       </div>
@@ -83,10 +81,9 @@
         <div class="col-lg-4 my-4">
           <div class="card-service rounded-3 d-flex justify-content-between align-items-center p-4">
             <div class="detail">
-              <p class="label">Book Category</p>
               <h3 class="heading">selft improvment</h3>
 
-              <a href="#" class="btn-service btn mt-4"><i class="bx bx-shopping-bag"></i>shop</a>
+              
 
             </div>
             <div class="img-service">
@@ -97,10 +94,7 @@
         <div class="col-lg-4 my-4">
           <div class="card-service rounded-3 d-flex justify-content-between align-items-center p-4">
             <div class="detail">
-              <p class="label">Book Category</p>
               <h3 class="heading">Novel</h3>
-
-              <a href="#" class="btn-service btn mt-4"><i class="bx bx-shopping-bag"></i>shop</a>
 
             </div>
             <div class="img-service">
@@ -111,10 +105,9 @@
         <div class="col-lg-4 my-4">
           <div class="card-service rounded-3 d-flex justify-content-between align-items-center p-4">
             <div class="detail">
-              <p class="label">Book Category</p>
               <h3 class="heading">biografi</h3>
 
-              <a href="#" class="btn-service btn mt-4"><i class="bx bx-shopping-bag"></i>shop</a>
+              
 
             </div>
             <div class="img-service">

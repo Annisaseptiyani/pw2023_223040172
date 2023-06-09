@@ -40,12 +40,12 @@ if(isset($_POST["cari"])) {
 <form action="" method="post" class="form">
 
 <input type="text" name="keyword" size="30" autofocus
-placeholder="masukan keyword pencarian...." autocomplete="off" class="form-control">
-<button type="submit" name="cari" class="btn btn-secondary mt-2">Cari!</button>
+placeholder="masukan keyword pencarian...." autocomplete="off" class="form-control" id="keyword">
+<button type="submit" name="cari" class="btn btn-secondary mt-2" id="tombol-cari">Cari!</button>
 </form>
 
 <br>
-
+<div id="container">
 <table border="1" cellpadding="10" cellspacing="0" class="table">
     <tr>
 <th>No.</th>
@@ -74,7 +74,8 @@ foreach($annis as $row ):
 </tr>
 <?php $i++; ?>
 <?php endforeach; ?>
-    </div>
-
+</table>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
