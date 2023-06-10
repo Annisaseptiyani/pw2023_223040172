@@ -24,6 +24,8 @@ function tambah($data){
    $judul_buku = htmlspecialchars($data["judul_buku"]);
    $penulis = htmlspecialchars($data["penulis"]);
    $penerbit =htmlspecialchars($data["penerbit"]);
+   $sinopsis =htmlspecialchars($data["sinopsis"]);
+   $spek =htmlspecialchars($data["spek"]);
    $harga =htmlspecialchars($data["harga"]);
 
    // upload gambar 
@@ -32,7 +34,7 @@ function tambah($data){
       return false;
    }
    
-$query = "INSERT INTO tb_product VALUES(null,'$judul_buku','$penulis','$penerbit','$harga','$gambar')";
+$query = "INSERT INTO tb_product VALUES(null,'$judul_buku','$penulis','$penerbit','$sinopsis','$spek','$harga','$gambar')";
 mysqli_query($conn , $query);
 
 return mysqli_affected_rows($conn);
@@ -61,7 +63,7 @@ function upload() {
    if(!in_array($ekstensigambar,$ekstensiGambarvalid)){
 
       echo "<script>
-      alert('pilih gambar terlebih dahulu');
+             alert('pilih gambar terlebih dahulu');
       </script>";
       return false;
 }
@@ -141,6 +143,7 @@ function cari($keyword) {
    $password = mysqli_real_escape_string($conn,$data["password"]);
    $password2 = mysqli_real_escape_string($conn,$data["password2"]);
    $email     = strtolower(stripslashes($data["email"]));
+   $role = 'user';
    
 //cek username sudah ada atau blm
  $result = mysqli_query($conn,"SELECT username FROM users WHERE username = '$username'");
@@ -163,7 +166,7 @@ function cari($keyword) {
  // enskripsi password
  $password = password_hash($password, PASSWORD_DEFAULT);
 //tambahkan ke database
- mysqli_query($conn, "INSERT INTO users VALUES(null,'$username','$password','$email')");
+ mysqli_query($conn, "INSERT INTO users VALUES(null,'$username','$password','$email', '$role')");
 
  return mysqli_affected_rows($conn);}
  

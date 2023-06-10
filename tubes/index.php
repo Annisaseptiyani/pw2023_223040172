@@ -1,3 +1,13 @@
+<?php 
+
+session_start();
+
+require 'function.php';
+
+$product = query("SELECT * FROM tb_product");
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -28,7 +38,7 @@
 </head>
 
 <body>
- 
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
       <div class="container">
@@ -41,7 +51,11 @@
             <a class="nav-link me-4 active" href="#home">Home</a>
             <a class="nav-link me-4" href="#service">service</a>
             <a class="nav-link me-4" href="#product">Product</a>
-        
+            <?php if(isset($_SESSION['login'])): ?>
+              <a class="nav-link me-4 btn btn-danger" href="logaut.php">Logout</a>
+              <?php else: ?>
+                <a class="nav-link me-4 btn btn-success" href="login.php">Login</a>
+            <?php endif; ?>
           </div>
           <div class="icons-home mt-3 mt-lg-0">
           </div>
@@ -83,7 +97,7 @@
             <div class="detail">
               <h3 class="heading">selft improvment</h3>
 
-              
+
 
             </div>
             <div class="img-service">
@@ -107,7 +121,7 @@
             <div class="detail">
               <h3 class="heading">biografi</h3>
 
-              
+
 
             </div>
             <div class="img-service">
@@ -142,83 +156,21 @@
           <!-- Swiper -->
           <div class="swiper mySwiperPopuler">
             <div class="swiper-wrapper">
+              <?php foreach($product as $pro): ?>
               <div class="swiper-slide card-product">
                 <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                <img src="img\The Frog Prince-300x450.jpg" class="img-fluid" alt="">
+                  <img src="img\<?= $pro['gambar']; ?>" class="img-fluid" alt="<?= $pro['gambar']; ?>">
                 </div>
                 <div class="detail-product mt-3 d-flex justify-content-between">
                   <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
+                    <a class="label text-center py-2" href="detail.php?id=<?= $pro['id']; ?>">Book</a>
                   </div>
                   <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
+                    <a href="https://web.whatsapp.com/" target="_blank" class="btn"><i class="bx bx-shopping-bag"></i></a>
                   </div>
-
                 </div>
               </div>
-              <div class="swiper-slide card-product">
-                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img\Puzzle Sliders Jungle Animals-300x450.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="detail-product mt-3 d-flex justify-content-between">
-                  <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
-                  </div>
-                  <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide card-product">
-                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img\Disney Princess Ariel-300x450.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="detail-product mt-3 d-flex justify-content-between">
-                  <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
-                  </div>
-                  <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide card-product">
-                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img\Busy Recycle-300x450.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="detail-product mt-3 d-flex justify-content-between">
-                  <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
-                  </div>
-                  <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide card-product">
-                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
-                  <img src="img\The Elves and the Shoemaker-300x450.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="detail-product mt-3 d-flex justify-content-between">
-                  <div class="info">
-                    <p class="label text-center py-2">Book</p>
-                    <p>30 Product</p>
-                  </div>
-                  <div class="btn-card">
-                    <a href="#" class="btn"><i class="bx bx-shopping-bag"></i></a>
-                  </div>
-
-                
-
-                </div>
-              </div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
@@ -228,21 +180,21 @@
 
   <!--footer-->
   <footer class="footer">
-  <div class="container">
-    <div class="row">
-    <div class="col text-center">
-      <h3 class="footer-brand"><span>Anni's</span>shop</h3>
-      <p>annisshop is a place where shopping for books becomes fun and exciting, there are various genres of books from extraordinary authors that we can take to make learning</p>
-      <p>anni'sshop123@gmail.com</p>
-      <div class="icon-footer">
-        <h3>contact us</h3>
-        <a href="#"><i class='bx bxl-whatsapp'></i></a>
-        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="footer-brand"><span>Anni's</span>shop</h3>
+          <p>annisshop is a place where shopping for books becomes fun and exciting, there are various genres of books from extraordinary authors that we can take to make learning</p>
+          <p>anni'sshop123@gmail.com</p>
+          <div class="icon-footer">
+            <h3>contact us</h3>
+            <a href="https://web.whatsapp.com/"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+          </div>
+        </div>
       </div>
     </div>
-</div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

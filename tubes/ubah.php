@@ -63,9 +63,19 @@ document.location.href = 'index1.php';
                 value="<?= $pro["penerbit"];?>">
            </li>
            <li>
+                <label for="sinopsis"> Sinopsis Buku: </label>
+               <input type="text" name="sinopsis" id="sinopsis"
+                value="<?= $pro["sinopsis"];?>">
+           </li>
+           <li>
+                <label for="spek"> Spesifikasi Buku: </label>
+               <input type="text" name="spek" id="spek"
+                value="<?= $pro["spek_buku"];?>">
+           </li>
+           <li>
                 <label for="harga"> Harga buku: </label>
-               <input type="text" name="harga" id="harga"
-             value="<?= $pro["judul_buku"];?>">
+               <input type="number" name="harga" id="harga"
+             value="<?= $pro["harga"];?>">
            </li>
            <li>
                 <label for="gambar"> Gambar : </label>

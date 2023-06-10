@@ -17,6 +17,8 @@ $annis = query($query);
 <th>judul buku</th>
 <th>penulis</th>
 <th>penerbit</th>
+<th>Sinopsis Buku</th>
+<th>Spesifikasi Buku</th>
 <th>harga</th>
 <th>gambar</th>
 </tr>
@@ -33,6 +35,8 @@ foreach($annis as $row ):
 <td><?= $row["judul_buku"]; ?></td>
 <td><?= $row["penulis"]; ?></td>
 <td><?= $row["penerbit"]; ?></td>
+<td><?= $row["sinopsis"]; ?></td>
+<td><?= $row["spek_buku"]; ?></td>
 <td><?= $row["harga"]; ?></td>
 <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
 </tr>

@@ -61,6 +61,15 @@ document.location.href = 'index1.php';
                required>
            </li>
            <li>
+                <label for="sinopsis"> sinopsis buku: </label>
+               <input type="text" name="sinopsis" id="sinopsis"
+               required>
+           <li>
+                <label for="spek"> spesifikasi buku: </label>
+               <input type="text" name="spek" id="spek"
+               required>
+           </li>
+           <li>
                 <label for="gambar"> Gambar : </label>
                <input type="file" name="gambar" id="gambar"
                required>

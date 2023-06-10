@@ -23,6 +23,25 @@ if(isset($_POST["login"])){
   if  (password_verify($password, $row["password"])) {
     //set session
     $_SESSION["login"] = true;
+    $_SESSION['id'] = $row['id'];
+    $_SESSION['role'] = $row['role'];
+
+    if($_SESSION['role'] == 'admin' ){
+      echo "
+      <script>
+        alert('Anda berhasil login');
+        window.location.href = 'index1.php';
+      </script>
+      ";
+    }
+    if($_SESSION['role'] == 'user' ){
+      echo "
+      <script>
+        alert('Anda berhasil login');
+        window.location.href = 'index.php';
+      </script>
+      ";
+    }
 
     //cek remember me
     if(isset($_POST['remember'])){
@@ -31,8 +50,8 @@ if(isset($_POST["login"])){
       setcookie('key',hash('sha256',$row['username']),time()+60);
     }
 
-    header("Location:index1.php");
-    exit;
+    // header("Location:index1.php");
+    // exit;
     
   }
 
